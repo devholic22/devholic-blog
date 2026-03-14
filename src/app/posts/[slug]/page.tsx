@@ -1,6 +1,8 @@
 import { getAllSlugs, getPostBySlug } from '@/lib/posts';
 import { MarkdownRenderer } from '@/components/MarkdownRenderer';
 import Link from 'next/link';
+import { getServerSession } from 'next-auth';
+import { DeleteButton } from '@/components/DeleteButton';
 
 export async function generateStaticParams() {
   const slugs = getAllSlugs();
@@ -32,6 +34,8 @@ export default async function PostPage({
 }) {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
+  const session = await getServerSession();
+  const isAuthenticated = !!session;
 
   if (!post) {
     return (
@@ -48,9 +52,12 @@ export default async function PostPage({
         <Link href="/" style={{ color: 'var(--accent)' }}>
           Back to posts
         </Link>
-        <Link href={`/posts/${slug}/edit`} style={{ color: 'var(--accent)', fontWeight: 500 }}>
-          Edit
-        </Link>
+        <div style={{ display: 'flex', gap: '1rem' }}>
+          {isAuthenticated && <DeleteButton slug={slug} />}
+          <Link href={`/posts/${slug}/edit`} style={{ color: 'var(--accent)', fontWeight: 500 }}>
+            Edit
+          </Link>
+        </div>
       </div>
       <h1 style={{ marginTop: '1rem', marginBottom: '1rem' }}>
         {post.title}
