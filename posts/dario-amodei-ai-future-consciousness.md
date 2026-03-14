@@ -2,7 +2,10 @@
 title: 'AI, 의식, 그리고 미래에 대한 Dario Amodei의 관점'
 date: '2026-03-14'
 tags:
-  - tech
+  - AI/철학
+  - 기술/미래
+  - 커리어/조언
+  - 윤리/안전성
 description: 'Anthropic CEO Dario Amodei가 말하는 AI의 미래, 인간 지능과의 경계, 그리고 사회가 놓치고 있는 것'
 slug: dario-amodei-ai-future-consciousness
 content: |
