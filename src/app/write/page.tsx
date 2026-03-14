@@ -3,7 +3,7 @@ import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
 
 export const metadata = {
-  title: 'Write | My Blog',
+  title: 'Write | Devholic Blog',
   description: 'Write a new post',
 };
 

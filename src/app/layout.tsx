@@ -3,7 +3,7 @@ import './globals.css';
 import { RootLayout } from '@/components/RootLayout';
 
 export const metadata: Metadata = {
-  title: 'My Blog',
+  title: 'Devholic Blog',
   description: 'A personal blog built with Next.js',
 };
 

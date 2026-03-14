@@ -13,7 +13,7 @@ export function RootLayout({
       <header style={styles.header}>
         <div style={styles.nav}>
           <Link href="/" style={styles.logo}>
-            My Blog
+            Devholic Blog
           </Link>
           <nav style={styles.navLinks}>
             <Link href="/">Posts</Link>
