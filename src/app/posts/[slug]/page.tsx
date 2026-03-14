@@ -52,12 +52,14 @@ export default async function PostPage({
         <Link href="/" style={{ color: 'var(--accent)' }}>
           Back to posts
         </Link>
-        <div style={{ display: 'flex', gap: '1rem' }}>
-          {isAuthenticated && <DeleteButton slug={slug} />}
-          <Link href={`/posts/${slug}/edit`} style={{ color: 'var(--accent)', fontWeight: 500 }}>
-            Edit
-          </Link>
-        </div>
+        {isAuthenticated && (
+          <div style={{ display: 'flex', gap: '1rem' }}>
+            <DeleteButton slug={slug} />
+            <Link href={`/posts/${slug}/edit`} style={{ color: 'var(--accent)', fontWeight: 500 }}>
+              Edit
+            </Link>
+          </div>
+        )}
       </div>
       <h1 style={{ marginTop: '1rem', marginBottom: '1rem' }}>
         {post.title}
