@@ -1,7 +1,11 @@
 ---
 title: 스탠포드에서 배우는 AI 네이티브 개발자의 생존법
 date: '2026-03-15'
-tags: []
+tags:
+  - 개발/커리어
+  - AI/엔지니어링
+  - 교육/스탠포드
+  - 기술/실무
 description: 스탠포드 'Modern Software Developer' 수업에서 Mihal이 말하는 주니어 개발자가 AI 시대에 살아남는 방법
 slug: stanford-ai-native-developer-survival
 content: |
