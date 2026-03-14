@@ -5,7 +5,7 @@ import { getServerSession } from 'next-auth';
 import { DeleteButton } from '@/components/DeleteButton';
 
 export async function generateStaticParams() {
-  const slugs = getAllSlugs();
+  const slugs = await getAllSlugs();
   return slugs.map((slug) => ({ slug }));
 }
 

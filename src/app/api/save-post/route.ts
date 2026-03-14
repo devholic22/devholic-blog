@@ -1,6 +1,7 @@
 import matter from 'gray-matter';
 import { PostMeta } from '@/lib/types';
 import { getServerSession } from 'next-auth';
+import { revalidatePath } from 'next/cache';
 
 export async function POST(req: Request) {
   try {
@@ -61,6 +62,9 @@ export async function POST(req: Request) {
     if (!putRes.ok) {
       return Response.json({ error: 'Failed to save to GitHub' }, { status: 500 });
     }
+
+    revalidatePath('/');
+    revalidatePath(`/posts/${slug}`);
 
     return Response.json({ ok: true, slug });
   } catch (error) {

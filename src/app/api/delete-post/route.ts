@@ -1,4 +1,5 @@
 import { getServerSession } from 'next-auth';
+import { revalidatePath } from 'next/cache';
 
 export async function POST(req: Request) {
   try {
@@ -56,6 +57,9 @@ export async function POST(req: Request) {
     if (!deleteRes.ok) {
       return Response.json({ error: 'Failed to delete from GitHub' }, { status: 500 });
     }
+
+    revalidatePath('/');
+    revalidatePath(`/posts/${slug}`);
 
     return Response.json({ ok: true, slug });
   } catch (error) {
