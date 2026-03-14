@@ -1,7 +1,11 @@
 ---
 title: 시대 흐름에 반하지 마 - 오픈클로 개발자
 date: '2026-03-15'
-tags: []
+tags:
+  - 기술/실무
+  - 교육/스탠포드
+  - AI/엔지니어링
+  - 개발/커리어
 description: 개발자로서 기술 트렌드와 시대의 흐름에 어떻게 대응해야 하는지에 대한 조언과 통찰
 slug: dont-go-against-the-trend
 content: |
