@@ -294,7 +294,7 @@ html: >
 
   </ul>
 source: 'https://www.youtube.com/watch?v=MI1uF10laRs'
-author: BZCF | 비즈까페
+author: Peter Steinberger
 ---
 ## 목차
 1. [핵심 논제](#핵심-논제)
