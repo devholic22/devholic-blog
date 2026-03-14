@@ -9,12 +9,13 @@ const handler = NextAuth({
     }),
   ],
   callbacks: {
-    async signIn({ user }) {
+    async signIn({ user, profile }) {
       const authorizedUsers = (process.env.AUTHORIZED_GITHUB_USERS || '').split(',').map(u => u.trim());
       if (authorizedUsers.length === 0 || authorizedUsers[0] === '') {
         return false;
       }
-      return authorizedUsers.includes(user.login as string);
+      const username = (profile as any)?.login || user.email || '';
+      return authorizedUsers.includes(username);
     },
   },
   pages: {
