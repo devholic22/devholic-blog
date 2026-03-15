@@ -1,11 +1,13 @@
 ---
-title: po-shen-loh-ai-era-human-value
+title: 도서관에 박혀 공부만 하는 천재들은 '이것'이 없어서 대체됩니다
 date: '2026-03-16'
 tags:
   - ai/future
   - 교육/미래
   - 커리어/조언
-description: 도서관에 박혀 공부만 하는 천재들은 '이것'이 없어서 대체됩니다
+description: >-
+  카네기멜론 수학자 Po-Shen Loh가 AI 이후 시대에 살아남을 인간의 진짜 가치와, 세계 곳곳의 숨겨진 인재를 연결하는 신뢰 네트워크의
+  힘에 대해 이야기한다.
 slug: po-shen-loh-ai-era-human-value
 content: >
 
