@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import { Post } from '@/lib/types';
+import { TranslatedText } from './TranslatedText';
 
 export function PostCard({ post }: { post: Post }) {
   const { slug, title, date, description, tags } = post;
@@ -7,7 +10,9 @@ export function PostCard({ post }: { post: Post }) {
   return (
     <article style={styles.card}>
       <Link href={`/posts/${slug}`} style={styles.titleLink}>
-        <h2 style={styles.title}>{title}</h2>
+        <h2 style={styles.title}>
+          <TranslatedText text={title} />
+        </h2>
       </Link>
       <p style={styles.date}>
         {new Date(date).toLocaleDateString('en-US', {
@@ -16,12 +21,16 @@ export function PostCard({ post }: { post: Post }) {
           day: 'numeric',
         })}
       </p>
-      {description && <p style={styles.description}>{description}</p>}
+      {description && (
+        <p style={styles.description}>
+          <TranslatedText text={description} />
+        </p>
+      )}
       {tags && tags.length > 0 && (
         <div style={styles.tags}>
           {tags.map((tag) => (
             <span key={tag} style={styles.tag}>
-              #{tag}
+              #<TranslatedText text={tag} />
             </span>
           ))}
         </div>

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { DarkModeToggle } from './DarkModeToggle';
+import { LanguageSelector } from './LanguageSelector';
 
 export function RootLayout({
   children,
@@ -19,7 +20,10 @@ export function RootLayout({
             <Link href="/">Posts</Link>
             <Link href="/write">Write</Link>
           </nav>
-          <DarkModeToggle />
+          <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+            <LanguageSelector />
+            <DarkModeToggle />
+          </div>
         </div>
       </header>
       <main style={styles.main}>{children}</main>

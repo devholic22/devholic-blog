@@ -1,5 +1,7 @@
 'use client';
 
+import { TranslatedText } from './TranslatedText';
+
 export function TagFilter({
   tags,
   activeTag,
@@ -31,7 +33,7 @@ export function TagFilter({
             ...(activeTag === tag ? styles.activeTag : {}),
           }}
         >
-          #{tag}
+          #<TranslatedText text={tag} />
         </button>
       ))}
     </div>

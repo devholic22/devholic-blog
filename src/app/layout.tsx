@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { RootLayout } from '@/components/RootLayout';
+import { LanguageProvider } from '@/context/LanguageContext';
 
 export const metadata: Metadata = {
   title: 'Devholic Blog',
@@ -15,7 +16,9 @@ export default function Layout({
   return (
     <html lang="en">
       <body>
-        <RootLayout>{children}</RootLayout>
+        <LanguageProvider>
+          <RootLayout>{children}</RootLayout>
+        </LanguageProvider>
       </body>
     </html>
   );
